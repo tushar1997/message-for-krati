@@ -38,7 +38,7 @@ const Section2 = () => {
         <img src={sectionImage} alt="Visual" />
         {showNewImage && (
           <img
-            src="/IMG_1116.jpeg"
+            src="/images/IMG_1116.jpeg"
             alt="IMG 1116"
             className="section2-extra-image"
           />
