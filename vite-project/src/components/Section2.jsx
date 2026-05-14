@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './Section2.css';
 import sectionImage from '../assets/section1.png';
 
 const Section2 = () => {
+  const [showNewImage, setShowNewImage] = useState(false);
+
+  const handleShowNewImage = () => {
+    setShowNewImage(true);
+  };
+
   return (
     <div className="section2" id="section2">
       <motion.div
@@ -14,6 +20,13 @@ const Section2 = () => {
         viewport={{ once: true, amount: 0.4 }}
       >
         <img src={sectionImage} alt="Visual" />
+        {showNewImage && (
+          <img
+            src="/IMG_1116.png"
+            alt="IMG 1116"
+            className="section2-extra-image"
+          />
+        )}
       </motion.div>
 
       <motion.div
@@ -30,7 +43,7 @@ const Section2 = () => {
           I still remember 19th April was the day when we felt Instagram dm would become short of servers space and hence we moved our conversations to Whatsapp coz baatein bohot zyaad thi aur instagram me jagah kam, I still remember the day! :P <br />
           But woh kehte hain naa, "If it's meant for you, it will find its way to you". Aur isliye mera Hinge account bhi delete hogaya randomly after a random thought, just because universe didn't want me to talk to anyone besides Krati.
           And how can i forget the day when I had the best Pizza of my life, Pizza was okay but the company was best because i finally met someone special randomly from Instagram for the first time, so it turned out be the best Pizza i had in my life and i still remember the date 22 April 2026! :)
-          And baato ka silsila kuch aisa chalaa that we got captured together for the first time on 5th May 2026 in Haldiram's cyber hub.
+          And baato ka silsila kuch aisa chalaa that we got captured together for the first time on 5th May 2026 in Haldiram's cyber hub. <span className="click-trigger" onClick={handleShowNewImage}>Click karo</span>
           And baatein kuch itni zyaada deep hogayi ki someone started caring for me and I'll still remember woh pyaar se kisi ne mujhe apne haath se khilaya hua Dosa on 9th May 2026! :P
           But jab baatein itni zyaada hogayi, then we get to know that we're getting annoyed too from each other, woh toh life ka basic funda hai ki if there are positives between two people then there are negatives too,
           So I was thinking… ki Krati Gupta ne toh mujhe life me special feel karwaya hi hai, aur itni baat ho hi gayi hai toh, how about I ask her something in a different way.

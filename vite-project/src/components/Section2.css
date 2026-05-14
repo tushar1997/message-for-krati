@@ -18,6 +18,16 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
+.section2-extra-image {
+  margin-top: 20px;
+}
+
+.click-trigger {
+  cursor: pointer;
+  color: #ffb400;
+  text-decoration: underline;
+}
+
 .right {
   flex: 1;
   max-width: 600px;
