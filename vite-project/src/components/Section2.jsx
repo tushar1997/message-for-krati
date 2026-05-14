@@ -33,7 +33,7 @@ const Section2 = () => {
           And baato ka silsila kuch aisa chalaa that we got captured together for the first time on 5th May 2026 in Haldiram's cyber hub.
           And baatein kuch itni zyaada deep hogayi ki someone started caring for me and I'll still remember woh pyaar se kisi ne mujhe apne haath se khilaya hua Dosa on 9th May 2026! :P
           But jab baatein itni zyaada hogayi, then we get to know that we're getting annoyed too from each other, woh toh life ka basic funda hai ki if there are positives between two people then there are negatives too,
-          So I was thinking… ki Krati Gupta ne toh mujhe life me special karwaya hi hai, aur itni baat ho hi gayi hai toh, how about I ask her something in a different way.
+          So I was thinking… ki Krati Gupta ne toh mujhe life me special feel karwaya hi hai, aur itni baat ho hi gayi hai toh, how about I ask her something in a different way.
         </p>
         <motion.a
           href="#section1"
