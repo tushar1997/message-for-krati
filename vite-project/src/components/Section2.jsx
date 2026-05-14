@@ -16,7 +16,7 @@ const Section2 = () => {
     timeoutRef.current = setTimeout(() => {
       setShowNewImage(false);
       timeoutRef.current = null;
-    }, 3000);
+    }, 2000);
   };
 
   useEffect(() => {
