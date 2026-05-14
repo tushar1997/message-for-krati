@@ -67,7 +67,7 @@ const handleMouseMove = (e) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
         >
-          And couldn't find, just like you're unable to find anything even with a light, so i thought of moving on as the life goes. 
+          And couldn't find, just like you're unable to find anything even with a light scrolling on this page, so i thought of moving on as the life goes. 
         </motion.p>
 
         <motion.a
