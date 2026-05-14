@@ -6,6 +6,7 @@ import sectionImage from '../assets/section1.png';
 const Section2 = () => {
   const [showNewImage, setShowNewImage] = useState(false);
   const timeoutRef = useRef(null);
+  const newImageSrc = import.meta.env.BASE_URL + 'images/IMG_1116.jpeg';
 
   const handleShowNewImage = () => {
     setShowNewImage(true);
@@ -38,7 +39,7 @@ const Section2 = () => {
         <img src={sectionImage} alt="Visual" />
         {showNewImage && (
           <img
-            src="/images/IMG_1116.jpeg"
+            src={newImageSrc}
             alt="IMG 1116"
             className="section2-extra-image"
           />
