@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import './Section2.css';
 import sectionImage from '../assets/section1.png';
 
@@ -16,7 +16,7 @@ const Section2 = () => {
     timeoutRef.current = setTimeout(() => {
       setShowNewImage(false);
       timeoutRef.current = null;
-    }, 5000);
+    }, 3000);
   };
 
   useEffect(() => {
@@ -36,14 +36,23 @@ const Section2 = () => {
         transition={{ duration: 1.2, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        <img src={sectionImage} alt="Visual" />
-        {showNewImage && (
-          <img
-            src={newImageSrc}
-            alt="IMG 1116"
-            className="section2-extra-image"
-          />
-        )}
+        <img src={sectionImage} alt="Visual" className="section2-main-image" />
+        <div className="section2-new-image-wrapper">
+          <AnimatePresence>
+            {showNewImage && (
+              <motion.img
+                key="new-image"
+                src={newImageSrc}
+                alt="IMG 1116"
+                className="section2-extra-image"
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                transition={{ duration: 0.4, ease: 'easeOut' }}
+              />
+            )}
+          </AnimatePresence>
+        </div>
       </motion.div>
 
       <motion.div
