@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p className="footer-text">
-        Designed & Developed with ❤️ by TUSHAR MADAAN only for ASHI GUPTA.
+        Designed & Developed with ❤️ by TUSHAR MADAAN only for KRATI GUPTA.
       </p>
     </footer>
   );

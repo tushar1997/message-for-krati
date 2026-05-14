@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <nav className="hero-navbar">
-        <div className="logo">Hi.... Ashi Gupta</div>
+        <div className="logo">Hi.... Krati Gupta</div>
         <ul className="nav-items">
           <li><a href="#">Move</a></li>
           <li><a href="#">Mouse</a></li>
