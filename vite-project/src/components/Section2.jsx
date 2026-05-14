@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import './Section2.css';
 import sectionImage from '../assets/section1.png';
 
 const Section2 = () => {
   const [showNewImage, setShowNewImage] = useState(false);
+  const timeoutRef = useRef(null);
 
   const handleShowNewImage = () => {
     setShowNewImage(true);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      setShowNewImage(false);
+      timeoutRef.current = null;
+    }, 5000);
   };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="section2" id="section2">
@@ -22,7 +38,7 @@ const Section2 = () => {
         <img src={sectionImage} alt="Visual" />
         {showNewImage && (
           <img
-            src="/IMG_1116.png"
+            src="/IMG_1116.jpeg"
             alt="IMG 1116"
             className="section2-extra-image"
           />
